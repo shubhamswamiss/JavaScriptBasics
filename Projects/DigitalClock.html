@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+</head>
+<body>
+    <b><span id="clock"></span></b>
+ 
+
+    <script>
+        
+     
+      
+      function currentTime(){
+          let todayDate = new Date();
+          let hours = todayDate.getHours();
+          let minutes = todayDate.getMinutes();
+          let seconds = todayDate.getSeconds();
+          am_pm = 'AM';
+
+          // Setting time for 12 Hrs format
+          if(hours >= 12){
+            if(hours > 12) hours -= 12;
+            am_pm = "PM"
+          }
+          else if(hours == 0){
+            hr = 12;
+            am_pm ="AM"
+;   
+          }
+
+
+          hours = hours < 10 ? "0" + hours : hours;
+          minutes = minutes < 10 ? "0" + minutes : minutes;
+          seconds = seconds < 10 ? "0" + seconds : seconds;
+          
+          console.log(`${hours} : ${minutes} : ${seconds}  ${am_pm}`);
+          
+          document.getElementById('clock').innerHTML = `${hours} : ${minutes} : ${seconds}  ${am_pm}`;
+         }
+
+        setInterval(currentTime, 1000);
+
+    
+</script>
+</body>
+</html>
