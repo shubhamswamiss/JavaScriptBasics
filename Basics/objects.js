@@ -13,4 +13,15 @@ const JsUser = {
 console.log(JsUser.email);
 console.log(JsUser['email']);
 console.log(typeof JsUser[mySym]);
-console.log(JsUser["full name"])
+console.log(JsUser["full name"]);
+
+// Combine Two Objects
+
+const example = {
+  key1:'key1',
+  key2:'key2'
+}
+
+const newObj = {...JsUser , ...example }
+
+console.log("New Obj",newObj)
