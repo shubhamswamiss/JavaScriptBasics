@@ -27,5 +27,6 @@ console.log(Math.floor(myTimeStamp/1000));
 
 // Convert Into Minutes
 console.log(Math.floor(myTimeStamp/(1000 * 60)));
+//helloooooooooooooooooooo
 
 console.log(myDate.getSeconds())
