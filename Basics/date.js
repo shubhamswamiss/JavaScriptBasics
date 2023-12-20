@@ -21,8 +21,8 @@ let myTimeStamp = Date.now();
 console.log(myTimeStamp);
 console.log(myCreatedDate.getTime());
 
-// Convert Into Seconds
-  
+// Convert Into Secondss
+// gftyftyifiytf
 console.log(Math.floor(myTimeStamp/1000));
 
 // Convert Into Minutes
