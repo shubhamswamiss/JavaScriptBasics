@@ -7,4 +7,4 @@ function loginUserMessage(username = "sam"){
 }
 
 console.log(loginUserMessage('hitesh'))
-console.log(loginUserMessage('Sakshi'))
+console.log(loginUserMessage('Sakshi function'))
