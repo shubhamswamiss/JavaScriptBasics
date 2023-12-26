@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .centerDiv{
+           width: 30%;
+           margin: 0 auto;
+           border: 2px solid red;
+        }
+        .parent-div{
+            display: flex;
+            justify-content: center;
+        }
+        .centered-div{
+            border: 2px solid green;
+            width: 30%;
+        }
+        .parent-container{
+            display: grid;
+            place-items: center;
+            
+        }
+        .centerByGrid{
+            width:30%;
+            border: 2px solid red;
+        }
+        .parentCenterVH{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: lightblue;
+            border: 2px solid yellow; */
+            height: 95vh;
+        
+        }
+        .centerVH{
+            border: 2px solid purple;
+           padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Center Margin using margin  -->
+    <!-- <div class="centerDiv">
+      Centered Div by using margin.
+    </div>
+    <br> -->
+
+    <!-- Using Flexbox  -->
+    <!-- <div class="parent-div">
+        <div class="centered-div">
+         Centered Div by using Flexbox.
+        </div>
+    </div>
+    <br> -->
+
+    <!-- Using Grid  -->
+    <!-- <div class="parent-container">
+        <div class="centerByGrid">
+         Centered div  by using Grid 
+        </div>
+    </div>
+    <br> -->
+
+    <!-- Centering Vertically and Horizontally (Flexbox Mehod): -->
+    <div class="parentCenterVH">
+        <div class="centerVH">
+            Centering Vertically and Horizontally (Flexbox Mehod):
+        </div>
+    </div>
+</body>
+</html>
