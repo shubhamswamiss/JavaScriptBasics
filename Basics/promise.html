@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+
+<body>
+    <script>
+        // Ex. 1
+        const promiseOne = new Promise(function (resolve, reject) {
+            setTimeout(function () {
+                console.log('Async task 1');
+                resolve();
+            }, 3000);
+        })
+
+        promiseOne.then(function () {
+            console.log('Promise Resolved');
+        })
+
+        // Ex. 2
+        new Promise(function (res, rej) {
+            setTimeout(function () {
+                console.log('Async 2');
+                res();
+            }, 5000)
+        }).then(function () {
+            console.log('Async 2 Promise Resolve');
+        })
+
+        // Ex. 3 
+        const promiseThree = new Promise(function (res, rej) {
+            setTimeout(function () {
+                res({
+                    username: 'shubham',
+                    email: 'shubham@gmail.com'
+                })
+            }, 1000)
+        })
+
+        promiseThree.then(function (user) {
+            console.log(user);
+        })
+
+        // Ex. 4
+        const promiseFour = new Promise(function (res, rej) {
+            setTimeout(function () {
+                let error = true;
+                if (!error) {
+                    res({
+                        username: 'hitesh',
+                        password: '123'
+                    })
+                } else {
+                    rej('ERROR : Someting Went Wrong')
+                }
+            }, 6000)
+        })
+
+        promiseFour
+            .then(function (user) {
+                console.log(user);
+                return user.username;
+            }).then((username) => {
+                console.log('Username :', username);
+            }).catch((err) => {
+                console.log(err);
+            }).finally(() => {
+                console.log('The Promise is either resolve or rejected');
+            })
+
+
+        // Ex. 5
+        const promiseFive = new Promise((res, rej) => {
+            setTimeout(() => {
+                let err = true;
+                if (!err) {
+                    res({ username: 'user1', password: '123456' });
+                } else {
+                    rej('ERROR: JS Went wrong')
+                }
+            }, 7000)
+        });
+
+        async function consumePromise() {
+            try {
+                const response = await promiseFive;
+                console.log(response);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
+        consumePromise();
+    </script>
+</body>
+
+</html>
