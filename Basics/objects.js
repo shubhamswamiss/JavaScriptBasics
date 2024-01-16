@@ -25,3 +25,5 @@ const example = {
 const newObj = {...JsUser , ...example }
 
 console.log("New Obj",newObj)
+
+
