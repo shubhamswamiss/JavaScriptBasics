@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Keyword React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+   class React {
+     constructor(){
+        this.library = "React"
+        this.server = 'https://localhost:3000/'
+
+        //requirment
+        document
+           .querySelector('button')
+      //   .addEventListener('click',this.handleClick)   // run for test (this keyword take reference of document only this=jiis)
+           .addEventListener('click',this.handleClick.bind(this))  // now it will take all class reference because of bind       
+    }
+
+     handleClick(){
+        console.log("button Clicked");
+        console.log("reference of this :",this);
+        console.log("server variable in constructor",this.server);
+     }
+   }
+
+   const chai = new React();
+</script>
+</html>
