@@ -16,7 +16,33 @@
             alert('button is clicked');
         }
         // Adding event listener to the button , passing the handleClick function  as callback 
-        button.addEventListener('click',handleClick);    
+        button.addEventListener('click',handleClick); 
+        
+        function fetchData(url,callback){
+            fetch(url).then(res=>{
+                  if(!res.ok){
+                    throw new Error('Network response was not ok');
+                  }
+                  
+                  return res.json();
+            }).then(data => {
+                callback(null,data);
+            }).catch(error => {
+                callback(error,null);
+            })
+        }
+        
+        
+        function handleData(error, data){
+           if(error){
+            console.error('Error fetching data:',error);
+           }
+           else{
+            console.log('Fetched Data:',data)
+           }
+        }
+
+        fetchData('https://jsonplaceholder.typicode.com/photos',handleData);
     </script>
 </body>
 </html>
