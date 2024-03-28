@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <p>Callback function is called when click on button</p>
+    <button id="mybutton">click me</button>
+    <script>
+        const button = document.getElementById('mybutton');
+
+        // Defining a callback function to handle the click event
+        function handleClick(){
+            alert('button is clicked');
+        }
+        // Adding event listener to the button , passing the handleClick function  as callback 
+        button.addEventListener('click',handleClick);    
+    </script>
+</body>
+</html>
