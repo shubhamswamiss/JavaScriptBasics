@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,22,88,44,26,100,402];
+        const max = arr.reduce((a,b)=> a>b ? a : b)
+        console.log("Max :",max);
+
+        const min = arr.reduce((a,b)=>{
+           if(a<b){
+            return a
+           }
+           return b;
+        })
+        console.log("Min",min);
+    </script>
+</body>
+</html>
