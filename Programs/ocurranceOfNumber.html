@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [1,2,1,5,2,6,9,1,5,3,10,8,9];
+        let count = {};
+
+        for (const i of arr) {
+            if (count[i]) {
+                count[i] += 1;
+            } else {
+                count[i] = 1;
+            }
+         
+        }
+        // return count;
+        console.log("count",count);
+
+
+        const arr2 = "shubham swami";
+
+        let temp = arr2.split('')
+        console.log(temp);
+        
+        let count2 = {};
+
+for (const i of temp) {
+    if (count2[i]) {
+        count2[i] += 1;
+    } else {
+        count2[i] = 1;
+    }
+
+}
+
+console.log("count",count2);
+
+
+     
+
+    </script>
+</body>
+</html>
