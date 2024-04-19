@@ -12,6 +12,10 @@
             console.log("indexOf :",arr.indexOf(ele) ,"Index: ",index);
            return arr.indexOf(ele)!==index});
         console.log("Duplicate Elements are: ",duplicates);
+
+        const arr = [1,2,3,5,4,2,2];
+        const duplicatearr = arr.filter((ele,index,arr)=>arr.indexOf(ele)!==index);
+        console.log('duplicate',duplicatearr);
     </script>
 </body>
 </html> 
