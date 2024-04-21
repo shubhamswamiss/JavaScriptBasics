@@ -30,3 +30,12 @@ console.log(Math.floor(myTimeStamp/(1000 * 60)));
 //helloooooooooooooooooooo
 
 console.log(myDate.getSeconds())
+
+const person = {
+    name:'John',
+    lastName: 'Doe',
+    fullName: function() { return  this.name + " " + this.lastName }
+}
+
+console.log(person);
+

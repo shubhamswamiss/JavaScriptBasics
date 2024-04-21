@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulate Keypress Event</title>
+</head>
+<body>
+    <button id="simulateKeyPressBtn">Simulate Keypress Event</button>
+
+    <script>
+        // Function to simulate keypress event
+        function simulateKeyPress() {
+            // Execute window.print()
+            window.print();
+
+            // Trigger print automatically after a delay
+            setTimeout(function() {
+                window.removeEventListener('focus', handleFocus);
+                printDocument();
+            }, 1000); // Adjust the delay as needed
+        }
+
+        // Event handler for button click
+        document.getElementById('simulateKeyPressBtn').addEventListener('click', getDefaultPrinterName);
+
+        // Function to print the document
+        function printDocument() {
+            window.print();
+        }
+
+        // Function to handle focus event
+        function handleFocus() {
+            printDocument();
+        }
+
+        // Event listener for window focus
+        window.addEventListener('focus', handleFocus);
+
+        function getDefaultPrinterName() {
+  if (navigator.print) {
+    return navigator.print.defaultPrinterName;
+  } else {
+    return "Browser doesn't support printer detection";
+  }
+}
+
+    </script>
+</body>
+</html>
