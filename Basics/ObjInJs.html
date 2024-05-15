@@ -13,6 +13,20 @@
         
         // Display some data from the object
         document.getElementById('demo').innerHTML = `The car color is <b>${car.color}</b>`; 
+
+        const person = {
+            firstname: "John",
+            lastName: "Doe",
+            age:50,
+            eyeColor: "blue",
+            fullName: function(){
+                return this.firstname+ " "+this.lastName;
+            }
+        }   
+
+        console.log(person.firstname);
+        console.log(person["age"]);
+        console.log(person.fullName());
     </script>
 </body>
 </html>
