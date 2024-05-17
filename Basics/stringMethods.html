@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>JavaScript String</h1>
+    <h2>The charAt() Method</h2>
+
+    <p>The charAt() method returns the character at a given position in a string:</p>
+
+    <h4 id="demo"></h4>
+    <script>
+       let txt = 'HELLO WORLD';
+       document.getElementById('demo').innerHTML = "Character at 6 position :"+ " " + txt.charAt(6); 
+       document.getElementById('demo').innerHTML = "Character Code at 6 :"+ " "+ txt.charCodeAt(6); 
+       document.getElementById('demo').innerHTML = "Character Code at 2 :"+ " "+ txt.at(2); 
+
+       // Extracting String Parts
+
+       // There are 3 methods for extracting a part of a string:
+       // slice(start, end)
+       // substring(start, end)
+       // substr(start, length)
+       // substring() is similar to slice().
+       // The difference is that start and end values less than 0 are treated as 0 in substring().
+       let text = "Apple, Bannan, Kivi";
+       let part = text.slice(-3);
+       let substr = text.substring(-3,5);
+       console.log("Slice Method :",part);
+       console.log("SubString Method :",substr);
+
+       console.log("text slice from 7 to 13",text.slice(7,13));
+       console.log("If second parameter not pass it will slice out remaining string :", text.slice(7));
+       console.log("If a parameter is negative, the position is counted from the end of the string:",text.slice(-5));
+
+
+    </script>
+</body>
+
+</html>
