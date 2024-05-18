@@ -43,6 +43,15 @@
        let substrEx = text.substr(7,6);
        console.log("substr method",substrEx);
 
+       // If you omit the second parameter, substr() will slice out the rest of the string.
+       let substrEx2 = text.substr(7);
+       console.log('substr() Omit second parameter',substrEx2);
+     
+       // If the first parameter is negative, the position counts from the end of the string.
+        let substrEx3 = text.substr(-4)
+        console.log("substr() passing negative parameter",substrEx3);
+
+
 
     </script>
 </body>
