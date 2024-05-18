@@ -16,41 +16,47 @@
 
     <h4 id="demo"></h4>
     <script>
-       let txt = 'HELLO WORLD';
-       document.getElementById('demo').innerHTML = "Character at 6 position :"+ " " + txt.charAt(6); 
-       document.getElementById('demo').innerHTML = "Character Code at 6 :"+ " "+ txt.charCodeAt(6); 
-       document.getElementById('demo').innerHTML = "Character Code at 2 :"+ " "+ txt.at(2); 
+        let txt = 'HELLO WORLD';
+        document.getElementById('demo').innerHTML = "Character at 6 position :" + " " + txt.charAt(6);
+        document.getElementById('demo').innerHTML = "Character Code at 6 :" + " " + txt.charCodeAt(6);
+        document.getElementById('demo').innerHTML = "Character Code at 2 :" + " " + txt.at(2);
 
-       // Extracting String Parts
+        // Extracting String Parts
 
-       // There are 3 methods for extracting a part of a string:
-       // slice(start, end)
-       // substring(start, end)
-       // substr(start, length)
-       // substring() is similar to slice().
-       // The difference is that start and end values less than 0 are treated as 0 in substring().
-       let text = "Apple, Bannan, Kivi";
-       let part = text.slice(-3);
-       let substr = text.substring(-3,5);
-       console.log("Slice Method :",part);
-       console.log("SubString Method :",substr);
+        // There are 3 methods for extracting a part of a string:
+        // slice(start, end)
+        // substring(start, end)
+        // substr(start, length)
+        // substring() is similar to slice().
+        // The difference is that start and end values less than 0 are treated as 0 in substring().
+        let text = "Apple, Bannan, Kivi";
+        let part = text.slice(-3);
+        let substr = text.substring(-3, 5);
+        console.log("Slice Method :", part);
+        console.log("SubString Method :", substr);
 
-       console.log("text slice from 7 to 13",text.slice(7,13));
-       console.log("If second parameter not pass it will slice out remaining string :", text.slice(7));
-       console.log("If a parameter is negative, the position is counted from the end of the string:",text.slice(-5));
+        console.log("text slice from 7 to 13", text.slice(7, 13));
+        console.log("If second parameter not pass it will slice out remaining string :", text.slice(7));
+        console.log("If a parameter is negative, the position is counted from the end of the string:", text.slice(-5));
 
-       // substr(start, length)
-       let substrEx = text.substr(7,6);
-       console.log("substr method",substrEx);
+        // substr(start, length)
+        let substrEx = text.substr(7, 6);
+        console.log("substr method", substrEx);
 
-       // If you omit the second parameter, substr() will slice out the rest of the string.
-       let substrEx2 = text.substr(7);
-       console.log('substr() Omit second parameter',substrEx2);
-     
-       // If the first parameter is negative, the position counts from the end of the string.
+        // If you omit the second parameter, substr() will slice out the rest of the string.
+        let substrEx2 = text.substr(7);
+        console.log('substr() Omit second parameter', substrEx2);
+
+        // If the first parameter is negative, the position counts from the end of the string.
         let substrEx3 = text.substr(-4)
-        console.log("substr() passing negative parameter",substrEx3);
+        console.log("substr() passing negative parameter", substrEx3);
 
+        // JavaScript String concat()
+
+        let text1 = "Hello";
+        let text2 = "world";
+        let text3 = text1.concat(" ",text2);
+        console.log("concat()",text3);
 
 
     </script>
