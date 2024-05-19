@@ -4,8 +4,8 @@ function fetchData(callback) {
   // fetching data from server
   setTimeout(() => {
     const data = "This is some data from server";
-    // Call the callback function and pass the data to it
-    callback(data);
+    // Call t;he callback function and pass the data to it
+    callback(data)
   }, 3000);
 }
 

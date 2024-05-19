@@ -2,7 +2,7 @@ let myArr = [ 0,1,2,3,4,5 ];
 
 // slice , splice
 
-console.log("A " , myArr);
+console.log("Array " , myArr);
 
 // Slice Method 
 // slice method does not modify the orignal array , it include only starting point 
