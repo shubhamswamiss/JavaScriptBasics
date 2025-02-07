@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <script>
+        // Hoisting
+        console.log(x, y);
+        var x, y;
+
+        // String Interpolation or String Concatination
+
+        let fname = "Shubham";
+        let lname = "Swami";
+        let age = 27;
+        let place = "Pune";
+
+        let result = "Hello Everyone my name is " + fname + " " + lname + " and I am " + age + " Year old" + " from " + place;
+        let result2 = `Hello Everyone my name is ${fname} ${lname} and I am ${age} Year old from ${place}`;
+        console.log("String Concatination", result);
+        console.log("String Interpolation", result2);
+
+        // Object
+
+        let person = {
+            fname: 'Joe',
+            lname: "Doe",
+            age: 30
+        }
+
+        console.log("Person Object", person);
+        console.log("Aceesing Object Value: ", person.fname);
+        console.log("Aceesing Object Value: ", person.lname);
+        console.log("Accessing value from other syntax", person['age']);
+
+        // Update Object
+
+        let getAge = person.age;  // 30
+        person.age = 35;
+        console.log("Updated age: ", person.age);
+
+        // Adding a new property to the object
+
+        person.isHappy = true;
+        console.log("Adding new property to object: ", person, person.isHappy);
+
+        // Delete property
+
+        delete person.age;
+        console.log("Deleting Object property", person);
+
+        // Constructor Method
+
+        let constObj = new Object();
+        console.log(typeof constObj);
+
+        constObj.name = 'Parth';
+        constObj.birthDate = "28/12/2000";
+        console.log("New Object", constObj);
+
+        // Arrays 
+
+        let ages = [20, 39, 10, 30, 60, 29, 59];
+        console.log("Array", ages);
+        console.log("First element in array", ages[0]);
+        console.log("type of array is ", typeof ages);
+        console.log("Last Element ", ages[ages.length - 1]);
+        console.log("Length", ages.length);
+
+        canDrive = 5;
+        x = "str";
+        y = canDrive + x;
+        console.log(typeof y);
+
+        function add(x, y) {
+            console.log("Inputs are ", x, y);
+            return x + y;
+            console.log(x + y);
+        }
+        console.log(add(30, 45));
+        alert(add(48, 49))
+
+        // functions
+
+        printHello();
+
+        function printHello() {
+            console.log("Hello!!");
+        }
+
+    </script>
+</body>
+
+</html>

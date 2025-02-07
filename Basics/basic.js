@@ -1,0 +1,1 @@
+"use strict"; //  treat all js code as newer version according to newer standard of ES6
