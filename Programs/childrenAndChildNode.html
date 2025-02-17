@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>  
+    <input type="text">
+        
+    <div class="week">
+       
+    </div>
+    <button onclick="showDay()">Show</button>
+    <script>
+        function showDay(){
+            const week = document.querySelector(".week");
+            const inputEle = document.querySelector("input")
+            
+            const newtextNode = document.createTextNode(inputEle.value)
+
+            const newElemente = document.createElement("p")
+
+            newElemente.appendChild(newtextNode)
+
+            week.appendChild(newElemente)
+            inputEle.value =" "
+        }
+    </script>
+</body>
+</html>
