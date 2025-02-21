@@ -7,25 +7,35 @@
     
 </head>
 <body>  
-    <input type="text">
-        
+    <!-- <input type="text"> -->
+    
     <div class="week">
        
     </div>
-    <button onclick="showDay()">Show</button>
+
+    <form action="xyz">
+        <input type="text">
+        <button type="submit" onclick="submitForm(event)">submit</button>
+    </form>
+    <!-- <button onclick="showDay()">Show</button> -->
     <script>
-        function showDay(){
-            const week = document.querySelector(".week");
-            const inputEle = document.querySelector("input")
+        // function showDay(){
+        //     const week = document.querySelector(".week");
+        //     const inputEle = document.querySelector("input")
             
-            const newtextNode = document.createTextNode(inputEle.value)
+        //     const newtextNode = document.createTextNode(inputEle.value)
 
-            const newElemente = document.createElement("p")
+        //     const newElemente = document.createElement("p")
 
-            newElemente.appendChild(newtextNode)
+        //     newElemente.appendChild(newtextNode)
 
-            week.appendChild(newElemente)
-            inputEle.value =" "
+        //     week.appendChild(newElemente)
+        // }
+
+        function submitForm(event){
+            event.preventDefault()
+            const week = document.querySelector(".week");
+            week.innerHTML = "Hello Pratik"
         }
     </script>
 </body>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOGO Offer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            padding: 20px;
+            max-width: 400px;
+            margin: auto;
+        }
+        h2 {
+            text-align: center;
+            color: #FF6B82;
+        }
+        .offer-box {
+            border: 1px solid #ddd;
+            padding: 25px;
+            margin: 10px 0;
+            position: relative;
+        }
+        .popular {
+            border: 2px solid #FF6B82;
+            position: relative;
+            padding-top: 20px;
+            background-color: #fff9fa;
+            
+        }
+        .popular .badge {
+            position: absolute;
+            top: -10px;
+            right: -15%;
+            transform: translateX(-50%);
+            background-color: #FF6B82;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 5px 15px;
+            border-radius: 5px 5px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        
+        /* .popular .badge::before,
+        .popular .badge::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            width: 8px;
+            height: 8px;
+            background-color: #d95567;
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+        .popular .badge::before {
+            left: 0;
+            transform: translateX(-100%);
+        }
+        .popular .badge::after {
+            right: 0;
+            transform: translateX(100%) scaleX(-1);
+        } */
+        .discount {
+            background-color: #FF6B82;
+            color: white;
+            font-size: 12px;
+            padding: 2px 6px;
+            margin-left: 5px;
+        }
+        .price {
+            float: right;
+            font-weight: bold;
+            margin:5px;
+        }
+        .old-price {
+            font-size: 12px;
+            color: #aaa;
+            text-decoration: line-through;
+            margin: 7%;
+        }
+        .size-color {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            width: 50%;
+        }
+        select {
+            padding: 5px;
+            width: 48%;
+        }
+        .free-delivery {
+            color: #FF6B82;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .total {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 5px;
+        }
+        .btn {
+            background-color: #FF6B82;
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .powered {
+            text-align: end;
+            font-size: 12px;
+            color: #aaa;
+            margin-top: 10px;
+        }
+        .radioBtn {
+            accent-color: #ff3f80;
+
+        }
+        .bogo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .line {
+            flex-grow: 1;
+            height: 1px;
+            background-color: lightgray;
+        }
+        .bogo-text {
+            margin: 0 10px;
+            font-weight: bold;
+            color: #ff6779;
+            font-size: 18px;
+        }
+        .first_box{
+            display: flex;
+            justify-content: space-between;
+        }
+        .Standard{
+            font-size: 15px;
+            margin: 6px;
+        }
+        .sizeColor span{
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bogo-container">
+        <div class="line"></div>
+        <div class="bogo-text">YAY! It's BOGO</div>
+        <div class="line"></div>
+    </div>
+
+    <div class="offer-box">
+        <div class="first_box">
+            <div>
+                <input type="radio" class="radioBtn" name="unit" checked>
+                 <strong>1 Unit</strong> <span class="discount">10% Off</span>
+                 <div class="Standard">&nbsp; &nbsp; Standard Price</div>
+            </div>
+
+            <div>
+                <div class="price">$10.00 USD</div>
+                <div class="old-price">$24.00 USD</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offer-box popular">
+        <div class="badge">MOST POPULAR</div>
+        <label>
+            <input type="radio" class="radioBtn" name="unit">
+            <strong>2 Unit</strong> <span class="discount">20% Off</span>
+        </label>
+        <span class="price">$18.00 USD</span>
+        <br>
+        <span class="old-price">$24.00 USD</span>
+
+        <div class="">
+            <div class="sizeColor">
+                <span>Size</span>
+                <span>Colour</span>
+            </div>
+            <div class="size-color">
+            <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+            </select>
+            <select>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+            </select>
+        </div>
+
+        <div class="size-color">
+            <select>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+            </select>
+            <select>
+                <option>Colour</option>
+                <option>Black</option>
+                <option>Red</option>
+                <option>Blue</option>
+            </select>
+        </div>
+        </div>
+     
+    </div>
+
+    <div class="offer-box">
+        <label>
+            <input type="radio" class="radioBtn" name="unit">
+            <strong>3 Unit</strong> <span class="discount">30% Off</span>
+        </label>
+        <span class="price">$24.00 USD</span>
+        <br>
+        <span class="old-price">$24.00 USD</span>
+    </div>
+
+    <div class="free-delivery">Free Delivery</div>
+    <div class="total">Total: $18.00 USD</div>
+
+    <button class="btn">+ Add to Cart</button>
+
+    <div class="powered"><i>@ Powered by Pumper</i></div>
+
+</body>
+</html>
