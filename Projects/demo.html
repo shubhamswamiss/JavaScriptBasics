@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,27 +9,30 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #fff;
-            padding: 20px;
             max-width: 400px;
             margin: auto;
         }
+
         h2 {
             text-align: center;
             color: #FF6B82;
         }
+
         .offer-box {
             border: 1px solid #ddd;
             padding: 25px;
-            margin: 10px 0;
+            margin-bottom: 20px;
             position: relative;
         }
+
         .popular {
             border: 2px solid #FF6B82;
             position: relative;
             padding-top: 20px;
             background-color: #fff9fa;
-            
+
         }
+
         .popular .badge {
             position: absolute;
             top: -10px;
@@ -45,7 +49,7 @@
             justify-content: center;
         }
 
-        
+
         /* .popular .badge::before,
         .popular .badge::after {
             content: "";
@@ -71,37 +75,51 @@
             padding: 2px 6px;
             margin-left: 5px;
         }
+
         .price {
             float: right;
             font-weight: bold;
-            margin:5px;
+            margin: 2px;
         }
+
         .old-price {
             font-size: 12px;
             color: #aaa;
             text-decoration: line-through;
             margin: 7%;
         }
+
         .size-color {
             display: flex;
             justify-content: space-between;
             margin-top: 10px;
-            width: 50%;
+            width: 60%;
         }
+
         select {
             padding: 5px;
             width: 48%;
+            font-size: 12px;
         }
+
+        .size-color select {
+            margin-left: 4px;
+        }
+
         .free-delivery {
             color: #FF6B82;
-            font-weight: bold;
-            margin-top: 10px;
         }
+
+        .count {
+            font-size: 11px;
+            margin: 5px;
+        }
+
         .total {
-            font-weight: bold;
-            text-align: right;
-            margin-top: 5px;
+            display: flex;
+            justify-content: space-between;
         }
+
         .btn {
             background-color: #FF6B82;
             color: white;
@@ -113,46 +131,62 @@
             cursor: pointer;
             margin-top: 15px;
         }
+
         .powered {
             text-align: end;
             font-size: 12px;
             color: #aaa;
             margin-top: 10px;
         }
+
         .radioBtn {
             accent-color: #ff3f80;
 
         }
+
+        .hidden-section {
+            margin-left: 1rem;
+        }
+
         .bogo-container {
             display: flex;
             align-items: center;
             justify-content: center;
             margin: 20px 0;
         }
+
         .line {
             flex-grow: 1;
             height: 1px;
             background-color: lightgray;
         }
+
         .bogo-text {
             margin: 0 10px;
             font-weight: bold;
             color: #ff6779;
             font-size: 18px;
         }
-        .first_box{
+
+        .first_box {
             display: flex;
             justify-content: space-between;
         }
-        .Standard{
+
+        .Standard {
             font-size: 15px;
             margin: 6px;
         }
-        .sizeColor span{
-            font-size: 12px;
+
+        .sizeColor {
+            font-size: 11px;
+            display: flex;
+            justify-content: space-around;
+            width: 50%;
         }
     </style>
 </head>
+
 <body>
 
     <div class="bogo-container">
@@ -165,8 +199,8 @@
         <div class="first_box">
             <div>
                 <input type="radio" class="radioBtn" name="unit" checked>
-                 <strong>1 Unit</strong> <span class="discount">10% Off</span>
-                 <div class="Standard">&nbsp; &nbsp; Standard Price</div>
+                <strong>1 Unit</strong> <span class="discount">10% Off</span>
+                <div class="Standard">&nbsp; &nbsp; Standard Price</div>
             </div>
 
             <div>
@@ -178,47 +212,53 @@
 
     <div class="offer-box popular">
         <div class="badge">MOST POPULAR</div>
-        <label>
-            <input type="radio" class="radioBtn" name="unit">
-            <strong>2 Unit</strong> <span class="discount">20% Off</span>
-        </label>
-        <span class="price">$18.00 USD</span>
-        <br>
-        <span class="old-price">$24.00 USD</span>
+        <div class="first_box">
+            <div>
+                <input type="radio" class="radioBtn" name="unit" checked>
+                <strong>2 Unit</strong> <span class="discount">20% Off</span>
+            </div>
 
-        <div class="">
+            <div>
+                <div class="price">$18.00 USD</div>
+                <div class="old-price">$24.00 USD</div>
+            </div>
+        </div>
+
+        <div class="hidden-section">
             <div class="sizeColor">
-                <span>Size</span>
-                <span>Colour</span>
+                <div>Size</div>
+                <div>Colour</div>
             </div>
             <div class="size-color">
-            <select>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-            </select>
-            <select>
-                <option>Black</option>
-                <option>Red</option>
-                <option>Blue</option>
-            </select>
+                <span class="count">#1</span>
+                <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <select>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </div>
+
+            <div class="size-color">
+                <span class="count">#2</span>
+                <select>
+                    <option>S</option>
+                    <option>M</option>
+                    <option>L</option>
+                </select>
+                <select>
+                    <option>Colour</option>
+                    <option>Black</option>
+                    <option>Red</option>
+                    <option>Blue</option>
+                </select>
+            </div>
         </div>
 
-        <div class="size-color">
-            <select>
-                <option>S</option>
-                <option>M</option>
-                <option>L</option>
-            </select>
-            <select>
-                <option>Colour</option>
-                <option>Black</option>
-                <option>Red</option>
-                <option>Blue</option>
-            </select>
-        </div>
-        </div>
-     
     </div>
 
     <div class="offer-box">
@@ -230,13 +270,16 @@
         <br>
         <span class="old-price">$24.00 USD</span>
     </div>
+    <div class="total">
+        <div class="free-delivery">Free Delivery</div>
+        <div>Total: $18.00 USD</div>
+    </div>
 
-    <div class="free-delivery">Free Delivery</div>
-    <div class="total">Total: $18.00 USD</div>
 
     <button class="btn">+ Add to Cart</button>
 
     <div class="powered"><i>@ Powered by Pumper</i></div>
 
 </body>
+
 </html>
